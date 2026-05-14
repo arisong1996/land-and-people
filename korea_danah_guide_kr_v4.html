@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=IM+Fell+English:ital@1&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f0e8;
+    color: #2a2520;
+    font-family: 'Noto Serif KR', serif;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+
+  .masthead { text-align: center; margin-bottom: 3.5rem; }
+
+  .obangsaek-strip {
+    display: flex;
+    height: 3px;
+    margin-bottom: 2.5rem;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .obangsaek-strip span { flex: 1; }
+
+  .masthead h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    color: #2a2520;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .masthead .subtitle-en {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #7a6e62;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+  }
+
+  .masthead .tagline {
+    font-size: 0.85rem;
+    color: #9a8e82;
+    letter-spacing: 0.12em;
+    font-weight: 300;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .nav button {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    padding: 6px 16px;
+    border: 0.5px solid #c8bfb0;
+    background: transparent;
+    color: #5a4e42;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 1px;
+    font-weight: 300;
+  }
+
+  .nav button:hover { background: #ece6da; border-color: #b5975a; color: #2a2520; }
+  .nav button.active { background: #2a2520; color: #f5f0e8; border-color: #2a2520; }
+
+  .section { display: none; animation: fadeIn 0.4s ease; }
+  .section.visible { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 1.6rem;
+  }
+
+  .section-num { font-size: 0.75rem; color: #b5975a; letter-spacing: 0.12em; flex-shrink: 0; font-weight: 300; }
+
+  .section-title { font-size: 1.5rem; font-weight: 400; letter-spacing: 0.1em; color: #2a2520; }
+
+  .section-title-en {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #9a8e82;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-left: 6px;
+  }
+
+  .body-text { font-size: 1rem; line-height: 2.1; color: #3a3028; font-weight: 300; }
+  .body-text p { margin-bottom: 1.2rem; }
+  .body-text p:last-child { margin-bottom: 0; }
+
+  .inset {
+    border-left: 2px solid #b5975a;
+    padding: 0.8rem 1.2rem;
+    margin: 1.6rem 0;
+    background: #ece6da;
+  }
+
+  .inset p { font-size: 0.95rem; color: #5a4e42; line-height: 2; margin: 0; font-weight: 300; }
+
+  .motif-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 1.4rem 0; }
+
+  .motif-tag {
+    font-size: 0.78rem;
+    color: #7a6e62;
+    border: 0.5px solid #c8bfb0;
+    padding: 4px 12px;
+    letter-spacing: 0.06em;
+    background: #f5f0e8;
+    font-weight: 300;
+  }
+
+  .조각보-block {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    margin: 1.8rem 0 0.6rem;
+    height: 60px;
+  }
+
+  .조각보-block div { border-radius: 1px; }
+
+  .조각보-caption {
+    font-size: 0.78rem;
+    color: #9a8e82;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.4rem;
+    line-height: 1.7;
+  }
+
+  .footer-strip { margin-top: 4rem; display: flex; height: 2px; overflow: hidden; }
+  .footer-strip span { flex: 1; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="obangsaek-strip">
+      <span style="background:#3a6b8a"></span>
+      <span style="background:#e8c84a"></span>
+      <span style="background:#f5f0e8; border: 0.5px solid #d8d0c4"></span>
+      <span style="background:#c94040"></span>
+      <span style="background:#2a2520"></span>
+    </div>
+    <div class="subtitle-en">Korea</div>
+    <h1>한 국</h1>
+    <div class="tagline">단아한 나라</div>
+  </div>
+
+  <nav class="nav">
+    <button class="active" onclick="show('geo', this)">지리</button>
+    <button onclick="show('climate', this)">기후</button>
+    <button onclick="show('people', this)">사람</button>
+    <button onclick="show('language', this)">언어</button>
+    <button onclick="show('food', this)">음식</button>
+    <button onclick="show('places', this)">관광명소</button>
+  </nav>
+
+  <div id="geo" class="section visible">
+    <div class="section-header">
+      <span class="section-num">一.</span>
+      <span class="section-title">지리<span class="section-title-en">Geography</span></span>
+    </div>
+    <div class="body-text">
+      <p>한반도는 아시아 대륙 동북쪽 끝에서 남쪽으로 뻗어 있으며, 서쪽으로는 황해, 동쪽으로는 동해를 끼고 있다. 크지도, 평탄하지도 않은 땅 — 국토의 약 70%가 산지로 이루어져 있어, 어느 방향으로 걸어도 머지않아 산자락이 나타난다.</p>
+      <div class="inset"><p>태백산맥이 반도의 동쪽 등줄기를 따라 길게 이어지며, 동쪽 사면은 바다로 가파르게 떨어지고 서쪽은 완만하게 들판과 강으로 열린다. 한강은 서울을 가로질러 서해로 흐른다.</p></div>
+      <p>서남쪽의 호남평야는 반도의 곡창지대로, 논과 감나무밭이 넓게 펼쳐진다. 남해안은 수천 개의 섬이 흩어져 있어, 검은 물과 초록빛 섬들이 어우러진 풍경이 마치 바다 위에 펼쳐진 조각보 같다. 수도 서울에 전체 인구의 절반 가까이가 몰려 있지만, 지역마다 고유한 말투와 색깔이 남아 있다.</p>
+    </div>
+    <div class="조각보-block">
+      <div style="background:#3a6b8a;opacity:.7"></div>
+      <div style="background:#c8bfb0"></div>
+      <div style="background:#5a8a5a;opacity:.8"></div>
+      <div style="background:#e8c84a;opacity:.6"></div>
+      <div style="background:#3a6b8a;opacity:.5"></div>
+      <div style="background:#5a8a5a;opacity:.5"></div>
+      <div style="background:#c8bfb0;opacity:.8"></div>
+      <div style="background:#c94040;opacity:.3"></div>
+      <div style="background:#5a8a5a;opacity:.7"></div>
+      <div style="background:#c8bfb0"></div>
+      <div style="background:#e8c84a;opacity:.5"></div>
+      <div style="background:#3a6b8a;opacity:.6"></div>
+      <div style="background:#c8bfb0;opacity:.6"></div>
+      <div style="background:#5a8a5a;opacity:.9"></div>
+      <div style="background:#e8c84a;opacity:.4"></div>
+    </div>
+    <p class="조각보-caption">조각보 — 자투리 천을 이어 붙여 만든 전통 보자기. 남해안의 크고 작은 섬들이 바다 위에 흩어진 모습에서 영감을 받은 시각적 모티프로 사용했습니다.</p>
+    <div class="motif-row">
+      <span class="motif-tag">태백산맥</span>
+      <span class="motif-tag">한강</span>
+      <span class="motif-tag">호남평야</span>
+      <span class="motif-tag">남해</span>
+    </div>
+  </div>
+
+  <div id="climate" class="section">
+    <div class="section-header">
+      <span class="section-num">二.</span>
+      <span class="section-title">기후<span class="section-title-en">Climate</span></span>
+    </div>
+    <div class="body-text">
+      <p>한국은 봄, 여름, 가을, 겨울 사계절이 뚜렷하다. 한국인들은 계절의 변화를 일상 속에서 자연스럽게 즐기며, 각 계절의 도래를 기억하고 그 마지막을 조금 아쉬워한다. 마치 매난국죽처럼 — 저마다의 기질과 날씨를 가진 네 개의 장.</p>
+      <div class="inset"><p>봄은 조심스럽게 찾아온다. 새벽 공기에 아직 서리가 남아 있는데도 매화가 피기 시작하고, 4월이 되면 벚꽃이 뒤를 잇는다. 화려하다기보다는 담담하게 — 연분홍빛이 회색 하늘을 배경으로 일주일쯤 머물다 떠난다.</p></div>
+      <p>여름은 방문객을 가장 놀라게 하는 계절이다. 7월의 장마는 습하고 무겁고, 습기가 피부에 달라붙는다. 하지만 그 뒤를 잇는 가을은 맑고 서늘하며, 어쩌면 가장 사랑받는 계절이다. 산이 주황빛과 붉은빛으로 물들고, 빛의 질감이 달라진다. 겨울은 춥고 건조하며, 시베리아에서 불어오는 바람이 도시를 훑고 지나간다. 눈은 조용히 내려 서울의 단단한 모서리를 부드럽게 덮는다.</p>
+    </div>
+    <div class="motif-row">
+      <span class="motif-tag">매화 — 겨울의 끝</span>
+      <span class="motif-tag">난초 — 봄</span>
+      <span class="motif-tag">국화 — 가을</span>
+      <span class="motif-tag">대나무 — 변치 않는 것</span>
+    </div>
+  </div>
+
+  <div id="people" class="section">
+    <div class="section-header">
+      <span class="section-num">三.</span>
+      <span class="section-title">사람<span class="section-title-en">People</span></span>
+    </div>
+    <div class="body-text">
+      <p>한국의 사회생활에는 따뜻한 격식이 있다. 관계는 층위가 있고, 세심하게 가꾸어지며, 함께 밥을 먹는다는 것은 단순한 식사 이상의 의미를 갖는다. 처음에는 조심스럽고 예의 바르지만, 한번 정이 들면 살뜰하고 진하게 챙기는 문화다.</p>
+      <div class="inset"><p>눈치는 말하지 않아도 분위기를 읽는 감각이다. 직접 표현하지 않아도 상대의 상황을 파악하고, 요청받기 전에 먼저 건네는 것 — 그런 조용한 배려가 자연스럽게 몸에 밴 문화다.</p></div>
+      <p>한국 사회는 오래된 것과 새로운 것이 가까이 공존한다. 어른을 공경하고 관계를 중시하는 유교적 문화가 뿌리 깊게 남아 있는 동시에, 젊은 세대는 빠르게 변화하는 트렌드를 이끈다. 오래된 사찰 옆에 세련된 카페가 나란히 있고, 골목 하나 사이로 수백 년의 시간이 공존한다.</p>
+    </div>
+    <div class="motif-row">
+      <span class="motif-tag">눈치</span>
+      <span class="motif-tag">정</span>
+      <span class="motif-tag">한</span>
+      <span class="motif-tag">흥</span>
+    </div>
+  </div>
+
+  <div id="language" class="section">
+    <div class="section-header">
+      <span class="section-num">四.</span>
+      <span class="section-title">언어<span class="section-title-en">Language</span></span>
+    </div>
+    <div class="body-text">
+      <p>한국어는 관계가 문법 안에 새겨진 언어다. 상대가 누구냐에 따라 말하는 방식이 달라지며, 나이와 친밀도, 사회적 위치가 문장의 구조 자체를 바꾼다. 밥 먹었냐는 간단한 질문도 상대에 따라 여러 가지 방식으로 표현되고, 그 각각이 다른 무게를 가진다.</p>
+      <div class="inset"><p>한글은 1443년 세종대왕이 창제한 문자로, 누구나 쉽게 배울 수 있도록 설계되었다. 자음과 모음의 형태는 소리를 낼 때 입술과 혀, 이가 취하는 모양을 본떴다고 전해진다. 기본 원리를 익히는 데는 하루면 충분하다.</p></div>
+      <p>한글은 자음과 모음을 음절 단위로 모아 쓰는 방식이 독특하다. 글자 하나하나가 작은 기하학적 구성을 이루고, 문장은 일정한 시각적 리듬을 가진다. 백자처럼 — 단순한 형태 안에 깊은 의도가 담겨 있고, 불필요한 것은 없다.</p>
+    </div>
+    <div class="motif-row">
+      <span class="motif-tag">훈민정음</span>
+      <span class="motif-tag">존댓말</span>
+      <span class="motif-tag">반말</span>
+    </div>
+  </div>
+
+  <div id="food" class="section">
+    <div class="section-header">
+      <span class="section-num">五.</span>
+      <span class="section-title">음식<span class="section-title-en">Food</span></span>
+    </div>
+    <div class="body-text">
+      <p>한국 밥상은 결코 허전하지 않다. 가장 소박한 식사도 밥 한 공기를 중심으로 여러 가지 반찬이 둘러싼다. 반찬은 곁들임이라기보다 반주에 가깝다 — 짠 것, 발효된 것, 고소한 것, 싱그러운 것이 함께 어우러지며, 조합으로 완성되는 한 끼다.</p>
+      <div class="inset"><p>김치는 한국 음식의 상징이다. 거의 모든 식사에 빠지지 않고, 배추와 무, 오이 등 다양한 재료로 수백 가지 방식으로 담근다. 겨울을 앞두고 온 가족이 함께 김치를 담그는 김장 문화는 유네스코 인류무형문화유산으로 등재되어 있다.</p></div>
+      <p>된장찌개는 발효된 구수함과 깊은 맛으로 추운 날 가장 위안이 되는 음식이다. 비빔밥은 따뜻함과 시원함, 부드러움과 아삭함이 한 그릇에 담겨, 비비는 행위로 하나가 된다. 파전은 비 오는 날의 음식이다 — 창문을 두드리는 빗소리와 막걸리 한 잔이 자연스럽게 따라온다.</p>
+    </div>
+    <div class="motif-row">
+      <span class="motif-tag">김치</span>
+      <span class="motif-tag">된장찌개</span>
+      <span class="motif-tag">비빔밥</span>
+      <span class="motif-tag">파전</span>
+      <span class="motif-tag">막걸리</span>
+    </div>
+  </div>
+
+  <div id="places" class="section">
+    <div class="section-header">
+      <span class="section-num">六.</span>
+      <span class="section-title">관광명소<span class="section-title-en">Places</span></span>
+    </div>
+    <div class="body-text">
+      <p>한국을 여행한다는 것은 서울 골목길의 활기찬 에너지와, 수백 년 순례자의 발걸음에 닳고 닳은 산사의 고요함 사이를 오가는 일이다. 하루면 가로지를 수 있는 작은 나라지만, 볼거리와 느낄 거리는 그보다 훨씬 많다.</p>
+      <div class="inset"><p>서울 경복궁은 조선 시대를 대표하는 궁궐로, 뒤로 북한산을 배경으로 삼은 풍경이 인상적이다. 궁 곳곳에 오방색 단청이 기둥과 들보 위에 정밀하게 펼쳐져 있어, 한국의 전통 색채 감각을 한눈에 볼 수 있다.</p></div>
+      <p>전주 한옥마을은 오래된 한옥이 잘 보존된 곳으로, 조선 궁중 음식 문화가 가장 풍부하게 남아 있는 도시이기도 하다. 경주는 신라의 옛 수도로, 초록빛 왕릉이 현대 도시 한가운데에서 언덕처럼 솟아 있다 — 역사가 특별히 숨지 않고 그냥 거기 있는 도시. 제주도는 화산 지형과 검은 돌, 귤 밭, 바람이 어우러진, 육지와는 또 다른 풍경이다.</p>
+    </div>
+    <div class="motif-row">
+      <span class="motif-tag">경복궁</span>
+      <span class="motif-tag">전주 한옥마을</span>
+      <span class="motif-tag">경주</span>
+      <span class="motif-tag">제주도</span>
+    </div>
+  </div>
+
+  <div class="footer-strip">
+    <span style="background:#3a6b8a"></span>
+    <span style="background:#e8c84a"></span>
+    <span style="background:#f5f0e8; border-top: 0.5px solid #d8d0c4"></span>
+    <span style="background:#c94040"></span>
+    <span style="background:#2a2520"></span>
+  </div>
+
+</div>
+
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('visible');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
